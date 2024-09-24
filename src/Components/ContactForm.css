@@ -1,0 +1,113 @@
+.transparent {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  box-shadow: none;
+}
+
+.form-control, .btn, .transparent-input {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #ccc;
+  color: #000;
+}
+
+.form-control::placeholder, .transparent-input::placeholder {
+  color: #000;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+input {
+  border: 2px solid black;
+}
+
+.animated-checkbox {
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  right: 20px;
+  animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s ease-in-out 2.5s;
+  border-style: none;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+
+.input-transparent {
+  background-color: transparent !important;
+}
+
+.input-transparent:hover {
+  padding: 12px;
+  border-color: grey;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-cr:hover {
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .form-control {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .btn-cr {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .animated-checkbox {
+    position: static;
+    margin: 20px auto;
+    animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s ease-in-out 2.5s;
+  }
+
+  .h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-control {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .h1 {
+    font-size: 20px;
+  }
+
+  .btn-cr {
+    font-size: 16px;
+  }
+
+  .col-md-8, .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card {
+    margin-top: 15px;
+  }
+}
